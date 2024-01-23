@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: dns-lookup-hostlist
-          image: devopsenhesacontainerregistry.azurecr.io/dns-resolver-tool/dns-lookup:0.1
+          image: <>
           volumeMounts:
             - name: hostfiles
               mountPath: ./dns-lookup/hostfiles/
