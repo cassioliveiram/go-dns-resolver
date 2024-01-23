@@ -1,0 +1,31 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dns-lookup-hostlist
+  namespace: dns-lookup-tool-ns
+  labels:
+    app: dns-lookup-hostlist
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dns-lookup-hostlist
+  template:
+    metadata:
+      labels:
+        app: dns-lookup-hostlist
+    spec:
+      containers:
+        - name: dns-lookup-hostlist
+          image: devopsenhesacontainerregistry.azurecr.io/dns-resolver-tool/dns-lookup:0.1
+          volumeMounts:
+            - name: hostfiles
+              mountPath: ./dns-lookup/hostfiles/
+          envFrom:
+            - secretRef:
+                name: dns-lookup-zoom-secrets
+      volumes:
+        - name: hostfiles
+          configMap:
+            name: dns-lookup-hostlist-cm
