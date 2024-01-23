@@ -17,7 +17,9 @@ func main() {
 		fmt.Println("Error reading from file:", err)
 		return
 	}
-
+	fmt.Println("\n")
+	fmt.Println("\n")
+	fmt.Println("\n")
 	fmt.Println("List of hosts to be validated:")
 	for _, hostsList := range hosts {
 		fmt.Println("-",hostsList)
