@@ -1,3 +1,5 @@
+[![CI - go-dns-resolver](https://github.com/cassioliveiram/go-dns-resolver/actions/workflows/gh-actions.yaml/badge.svg)](https://github.com/cassioliveiram/go-dns-resolver/actions/workflows/gh-actions.yaml)
+
 ## go-dns-resolver
 
 The go DNS Resolver is a tool to validate like nslookup a list of dns servers and get back the correspondent
