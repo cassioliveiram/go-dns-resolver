@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: dns-lookup-hostlist
-          image: <>
+          image: cassioliveiram/go-dns-resolver:latest
           volumeMounts:
             - name: hostfiles
               mountPath: ./dns-lookup/hostfiles/
