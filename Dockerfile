@@ -1,7 +1,7 @@
 FROM golang:1.20.0-alpine as build
 
 WORKDIR /dns-lookup
-COPY . .
+COPY * .
 RUN go build .
 
 FROM alpine:3.19 as final
